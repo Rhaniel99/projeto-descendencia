@@ -24,6 +24,7 @@
     {"name":"Inventory_style_03a","order":8,"path":"sprites/Inventory_style_03a/Inventory_style_03a.yy",},
     {"name":"Inventory_style_03c","order":6,"path":"sprites/Inventory_style_03c/Inventory_style_03c.yy",},
     {"name":"item_15","order":16,"path":"sprites/item_15/item_15.yy",},
+    {"name":"rm_03","order":2,"path":"rooms/rm_03/rm_03.yy",},
     {"name":"obj_item","order":8,"path":"objects/obj_item/obj_item.yy",},
     {"name":"item_4","order":5,"path":"sprites/item_4/item_4.yy",},
     {"name":"item_3","order":4,"path":"sprites/item_3/item_3.yy",},
