@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_parede",
+  "name": "obj_chao",
   "eventList": [],
   "managed": true,
   "overriddenProperties": [],
@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_parede",
-    "path": "sprites/spr_parede/spr_parede.yy",
+    "name": "spr_chao",
+    "path": "sprites/spr_chao/spr_chao.yy",
   },
   "spriteMaskId": null,
   "visible": true,
