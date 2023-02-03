@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "ambiente",
-    "path": "folders/Objetos/ambiente.yy",
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
   },
   "parentObjectId": null,
   "persistent": false,
