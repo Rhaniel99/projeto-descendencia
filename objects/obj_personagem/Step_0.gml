@@ -1,19 +1,11 @@
-/// @description Inserir descrição aqui
-// Você pode escrever seu código neste editor
-
-
-#region Controles
-direita = keyboard_check(ord("D"));
-cima = keyboard_check(ord("W"));
-baixo = keyboard_check(ord("S"));
-esquerda = keyboard_check(ord("A"));
-#endregion
+if (global.pause)
+	return;
 
 #region Controles
-direita = keyboard_check(ord("D"));
-cima = keyboard_check(ord("W"));
-baixo = keyboard_check(ord("S"));
-esquerda = keyboard_check(ord("A"));
+direita = keyboard_check(ord("D")) || keyboard_check(vk_right);
+cima = keyboard_check(ord("W")) || keyboard_check(vk_up);
+baixo = keyboard_check(ord("S")) || keyboard_check(vk_down);
+esquerda = keyboard_check(ord("A")) || keyboard_check(vk_left);
 #endregion
 
 #region Colisão
@@ -49,14 +41,18 @@ if (keyboard_check_pressed(ord("E"))) {
     // Verifica se o objeto existe e se a distância entre o personagem e o objeto é menor ou igual a um valor específico
     if (object && point_distance(x, y, object.x, object.y) <= 58) {
         // Define a variável "interacao" como verdadeira
-        object.interacao = true;
-		
-
+        object.interacao = true
         
         // Exibe uma mensagem na tela
         show_message("Você encontrou uma carta antiga!");
-		
     }
+	
+	object = instance_nearest(x, y, obj_item);
+	
+	if (object && point_distance(x, y, object.x, object.y) <= 58)
+	{
+		object.GetObject();
+	}
 }
 	
 
