@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_carta",
-  "bbox_bottom": 21,
+  "bbox_bottom": 31,
   "bbox_left": 0,
-  "bbox_right": 26,
+  "bbox_right": 31,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"093a1e6d-5a2b-4c33-95a2-22eecab29f2f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0d89205-6878-44f3-bbe4-6f15e3b820b3",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 22,
+  "height": 32,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d2cfd13c-4f00-4216-9176-e5b0f5712972","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9dfe8be4-6fe2-4dc8-ab48-efed9895cd5a","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"093a1e6d-5a2b-4c33-95a2-22eecab29f2f","path":"sprites/spr_carta/spr_carta.yy",},},},"Disabled":false,"id":"6b55dfc1-1505-4088-836b-cc72386f96d2","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b0d89205-6878-44f3-bbe4-6f15e3b820b3","path":"sprites/spr_carta/spr_carta.yy",},},},"Disabled":false,"id":"0a96098d-0a31-4b5a-b161-82bb813694d8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 27,
+  "width": 32,
 }

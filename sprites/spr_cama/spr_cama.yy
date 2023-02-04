@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_cama",
-  "bbox_bottom": 477,
-  "bbox_left": 234,
-  "bbox_right": 361,
-  "bbox_top": 246,
+  "bbox_bottom": 188,
+  "bbox_left": 93,
+  "bbox_right": 142,
+  "bbox_top": 97,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e8c5a8b-fc86-463f-937a-99784ab99ae5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5cb5a165-a449-493e-a621-4e8abc8d6686",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 506,
+  "height": 200,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"195daa4f-5a83-409f-b546-33ef60514e4b","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6416164c-35c7-40d6-94c6-4a830746f10e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6e8c5a8b-fc86-463f-937a-99784ab99ae5","path":"sprites/spr_cama/spr_cama.yy",},},},"Disabled":false,"id":"ef5f8c8a-4314-46ad-ba5b-cdefc0cbe7d7","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5cb5a165-a449-493e-a621-4e8abc8d6686","path":"sprites/spr_cama/spr_cama.yy",},},},"Disabled":false,"id":"fe0ca605-3325-417e-8fd4-2d737b5fa5c3","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 506,
+  "width": 200,
 }
