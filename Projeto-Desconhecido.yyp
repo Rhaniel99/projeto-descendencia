@@ -90,10 +90,8 @@
     {"id":{"name":"Inventory_style_01b","path":"sprites/Inventory_style_01b/Inventory_style_01b.yy",},"order":0,},
     {"id":{"name":"item_9","path":"sprites/item_9/item_9.yy",},"order":0,},
     {"id":{"name":"item_16","path":"sprites/item_16/item_16.yy",},"order":0,},
-    {"id":{"name":"rm_01","path":"rooms/rm_01/rm_01.yy",},"order":0,},
   ],
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_01","path":"rooms/rm_01/rm_01.yy",},},
     {"roomId":{"name":"rm_02","path":"rooms/rm_02/rm_02.yy",},},
     {"roomId":{"name":"rm_03","path":"rooms/rm_03/rm_03.yy",},},
   ],
