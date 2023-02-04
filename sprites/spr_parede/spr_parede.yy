@@ -27,6 +27,8 @@
   "parent": {
     "name": "Sprites",
     "path": "folders/Sprites.yy",
+    "name": "Objetos",
+    "path": "folders/Objetos.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
