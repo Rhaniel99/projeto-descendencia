@@ -1,13 +1,15 @@
+// Pousar personagem ao trocar de room.
+if (instance_exists(obj_transicao)) exit;	
 if (global.pause)
 	return;
-
+	
 #region Controles
 direita = keyboard_check(ord("D")) || keyboard_check(vk_right);
 cima = keyboard_check(ord("W")) || keyboard_check(vk_up);
 baixo = keyboard_check(ord("S")) || keyboard_check(vk_down);
 esquerda = keyboard_check(ord("A")) || keyboard_check(vk_left);
 #endregion
-
+#region Movimentacao
 vveloc = (baixo - cima);
 hveloc = (direita - esquerda);
 
@@ -21,7 +23,7 @@ if hveloc != 0 or vveloc != 0 {
 
 hveloc = lengthdir_x(veloc, veloc_dir);
 vveloc = lengthdir_y(veloc, veloc_dir);
-
+#endregion
 #region Colisão
 
 if place_meeting(x + hveloc, y, obj_parede){
@@ -44,10 +46,7 @@ y += vveloc;
 
 
 #endregion
-
-
-
-
+#region Interacao
 
 if (keyboard_check_pressed(ord("E"))) {
     // Armazena o objeto mais próximo do personagem com o tipo obj_carta em uma variável
@@ -69,7 +68,8 @@ if (keyboard_check_pressed(ord("E"))) {
 		object.GetObject();
 	}
 }
-
+#endregion
+#region Armas/Ferramentas
 // Tiro
 if (mouse_check_button(mb_left) && cooldown < 1)
 {
@@ -83,6 +83,47 @@ if (mouse_check_button(mb_left) && cooldown < 1)
 
 cooldown = cooldown - 1 
 	
+#endregion
+if (keyboard_check(ord("D"))) hveloc = 1;
+else if (keyboard_check(ord("A"))) hveloc = -1;
 
-if (instance_exists(obj_transicao)) exit;	
+if (keyboard_check(ord("W"))) vveloc = -1;
+else if (keyboard_check(ord("S"))) vveloc = 1;
 
+var dir = 0;
+if (hveloc == 1) dir = 0;
+else if (vveloc == -1) dir = 1;
+else if (hveloc == -1) dir = 2;
+else if (vveloc == 1) dir = 3;
+
+if (hveloc == 0 && vveloc == 0) {
+switch (dir) {
+case 0:
+sprite_index = spr_personagem_parado_direita;
+break;
+case 1:
+sprite_index = spr_personagem_parado_cima;
+break;
+case 2:
+sprite_index = spr_personagem_parado_esquerda;
+break;
+case 3:
+sprite_index = spr_personagem_parado_baixo;
+break;
+}
+} else {
+switch (dir) {
+case 0:
+sprite_index = spr_personagem_correndo_direita;
+break;
+case 1:
+sprite_index = spr_personagem_correndo_cima;
+break;
+case 2:
+sprite_index = spr_personagem_correndo_esquerda;
+break;
+case 3:
+sprite_index = spr_personagem_correndo_baixo;
+break;
+}
+}

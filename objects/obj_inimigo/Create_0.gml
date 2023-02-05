@@ -1,7 +1,7 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 randomize();
-estado = src_enemy_andando;
+estado = src_enemy_escolher_estado;
 prox_estado = 0;
 
 

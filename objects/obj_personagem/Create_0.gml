@@ -1,12 +1,12 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
-max_vida = 20;
+max_vida = 5;
 vida = max_vida;
 max_sanidade = 100;
 sanidade = max_sanidade;
 
-
-
+tomardano = true;
+dano_alfa = -1;
 // Movimentação
 direita = -1;
 cima = -1;
