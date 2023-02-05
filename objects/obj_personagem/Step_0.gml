@@ -8,7 +8,22 @@ baixo = keyboard_check(ord("S")) || keyboard_check(vk_down);
 esquerda = keyboard_check(ord("A")) || keyboard_check(vk_left);
 #endregion
 
+vveloc = (baixo - cima);
+hveloc = (direita - esquerda);
+
+veloc_dir = point_direction(x, y, x + hveloc, y + vveloc);
+
+if hveloc != 0 or vveloc != 0 {
+	veloc = 2;
+}else{
+	veloc = 0;
+}
+
+hveloc = lengthdir_x(veloc, veloc_dir);
+vveloc = lengthdir_y(veloc, veloc_dir);
+
 #region Colisão
+
 if place_meeting(x + hveloc, y, obj_parede){
  while !place_meeting(x + sign(hveloc), y, obj_parede){
 	 x += sign(hveloc);
@@ -17,7 +32,7 @@ if place_meeting(x + hveloc, y, obj_parede){
 }
 x += hveloc;
 
-vveloc = (baixo - cima) * veloc;
+
 
 if place_meeting(x , y + vveloc, obj_parede){
  while !place_meeting(x, y + sign(vveloc), obj_parede){
@@ -30,7 +45,7 @@ y += vveloc;
 
 #endregion
 
-hveloc = (direita - esquerda) * veloc;
+
 
 
 
@@ -54,6 +69,19 @@ if (keyboard_check_pressed(ord("E"))) {
 		object.GetObject();
 	}
 }
+
+// Tiro
+if (mouse_check_button(mb_left) && cooldown < 1)
+{
+	var shot = instance_create_depth(x, y, 1, obj_tiro)
+	shot.image_angle = point_direction(x,y,mouse_x,mouse_y)
+	shot.direction = point_direction(x,y,mouse_x,mouse_y)
+	shot.speed = 7
+	
+	cooldown = 2 * 60
+}
+
+cooldown = cooldown - 1 
 	
 
 if (instance_exists(obj_transicao)) exit;	

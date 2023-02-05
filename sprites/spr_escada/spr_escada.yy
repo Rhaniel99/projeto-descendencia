@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_escada",
-  "bbox_bottom": 63,
+  "bbox_bottom": 79,
   "bbox_left": 0,
-  "bbox_right": 63,
+  "bbox_right": 79,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4278eb7-706b-4641-b9f2-dd8a74e5003c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e162da5-173d-4025-b027-77e950fe5b5b",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 80,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"17b8260e-9e26-496c-b514-2e2de44e5d5d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d9fd9e84-a2aa-4847-bc80-4a94998b4c72","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Casa",
-    "path": "folders/Sprites/Casa.yy",
+    "name": "Quarto",
+    "path": "folders/Sprites/Quarto.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e4278eb7-706b-4641-b9f2-dd8a74e5003c","path":"sprites/spr_escada/spr_escada.yy",},},},"Disabled":false,"id":"2b674ba8-8280-4bd2-9013-aacf0b8f70c8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8e162da5-173d-4025-b027-77e950fe5b5b","path":"sprites/spr_escada/spr_escada.yy",},},},"Disabled":false,"id":"b5de2149-3f3a-4236-bbe7-ce382aa8c288","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 80,
 }

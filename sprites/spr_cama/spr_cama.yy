@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_cama",
-  "bbox_bottom": 188,
-  "bbox_left": 93,
-  "bbox_right": 142,
-  "bbox_top": 97,
+  "bbox_bottom": 179,
+  "bbox_left": 88,
+  "bbox_right": 135,
+  "bbox_top": 92,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -17,7 +17,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 200,
+  "height": 190,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6416164c-35c7-40d6-94c6-4a830746f10e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Quarto",
+    "path": "folders/Sprites/Quarto.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 200,
+  "width": 190,
 }
