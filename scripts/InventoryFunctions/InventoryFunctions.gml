@@ -34,7 +34,7 @@ function InventoryReorder(obj, item)
 			obj.inventory[i] = obj.inventory[i + 1];
 }
 
-function InventoryRemove(obj, item)
+function InventoryUse(obj, item)
 {
 	var _slot = InventorySearch(obj, item)
 	if (_slot != -1)
@@ -59,11 +59,6 @@ function InventoryAdd(obj, item)
 	}
 	
 	return false;
-}
-
-function InventorySearchByIndex(obj, index)
-{
-	return obj.inventory[index];
 }
 
 function InventoryGetValids(obj)
