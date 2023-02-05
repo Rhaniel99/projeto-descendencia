@@ -1,14 +1,31 @@
+// Pousar personagem ao trocar de room.
+if (instance_exists(obj_transicao)) exit;	
 if (global.pause)
 	return;
-
+	
 #region Controles
 direita = keyboard_check(ord("D")) || keyboard_check(vk_right);
 cima = keyboard_check(ord("W")) || keyboard_check(vk_up);
 baixo = keyboard_check(ord("S")) || keyboard_check(vk_down);
 esquerda = keyboard_check(ord("A")) || keyboard_check(vk_left);
 #endregion
+#region Movimentacao
+vveloc = (baixo - cima);
+hveloc = (direita - esquerda);
 
+veloc_dir = point_direction(x, y, x + hveloc, y + vveloc);
+
+if hveloc != 0 or vveloc != 0 {
+	veloc = 2;
+}else{
+	veloc = 0;
+}
+
+hveloc = lengthdir_x(veloc, veloc_dir);
+vveloc = lengthdir_y(veloc, veloc_dir);
+#endregion
 #region Colisão
+
 if place_meeting(x + hveloc, y, obj_parede){
  while !place_meeting(x + sign(hveloc), y, obj_parede){
 	 x += sign(hveloc);
@@ -17,7 +34,7 @@ if place_meeting(x + hveloc, y, obj_parede){
 }
 x += hveloc;
 
-vveloc = (baixo - cima) * veloc;
+
 
 if place_meeting(x , y + vveloc, obj_parede){
  while !place_meeting(x, y + sign(vveloc), obj_parede){
@@ -29,10 +46,7 @@ y += vveloc;
 
 
 #endregion
-
-hveloc = (direita - esquerda) * veloc;
-
-
+#region Interacao
 
 if (keyboard_check_pressed(ord("E"))) {
     // Armazena o objeto mais próximo do personagem com o tipo obj_carta em uma variável
@@ -54,7 +68,21 @@ if (keyboard_check_pressed(ord("E"))) {
 		object.GetObject();
 	}
 }
+#endregion
+#region Armas/Ferramentas
+// Tiro
+if (mouse_check_button(mb_left) && cooldown < 1)
+{
+	var shot = instance_create_depth(x, y, 1, obj_tiro)
+	shot.image_angle = point_direction(x,y,mouse_x,mouse_y)
+	shot.direction = point_direction(x,y,mouse_x,mouse_y)
+	shot.speed = 7
 	
+	cooldown = 2 * 60
+}
 
-if (instance_exists(obj_transicao)) exit;	
+cooldown = cooldown - 1 
+	
+#endregion
+
 
