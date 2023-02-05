@@ -7,6 +7,9 @@ if (item != global.empty_item)
 		instance_destroy(id);
 	}
 	
+	if (item.used)
+		instance_destroy(id);
+	
 	return;
 }
 

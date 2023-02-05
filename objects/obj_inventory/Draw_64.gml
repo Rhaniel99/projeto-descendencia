@@ -24,7 +24,9 @@ draw_sprite_stretched(
 	inventory_height // height
 );
 
-for(var i = 0; i < INVENTORY_SLOTS; i += 1)
+var inventoryAux = InventoryGetValids(obj_inventory)
+
+for(var i = 0; i < array_length(inventoryAux); i += 1)
 {
 	var xx = x + (i mod rowLength) * size + 4;
 	var yy = y + (i div rowLength) * size + 2;
@@ -33,7 +35,7 @@ for(var i = 0; i < INVENTORY_SLOTS; i += 1)
 	
 	draw_sprite_stretched(image_reference, 0, xx, yy, size_slot, size_slot);
 	
-	var item = inventory[i];
+	var item = inventoryAux[i];
 	
 	if (item == global.empty_item)
 		continue;
