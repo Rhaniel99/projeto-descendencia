@@ -1,4 +1,5 @@
 // Pousar personagem ao trocar de room.
+
 if (instance_exists(obj_transicao)) exit;	
 if (global.pause)
 	return;
@@ -23,6 +24,53 @@ if hveloc != 0 or vveloc != 0 {
 
 hveloc = lengthdir_x(veloc, veloc_dir);
 vveloc = lengthdir_y(veloc, veloc_dir);
+
+
+// Movimentação da Sprite
+if (keyboard_check(ord("D"))) hveloc = 1;
+else if (keyboard_check(ord("A"))) hveloc = -1;
+
+if (keyboard_check(ord("W"))) vveloc = -1;
+else if (keyboard_check(ord("S"))) vveloc = 1;
+
+var dir = 0;
+if (hveloc == 1) dir = 0;
+else if (vveloc == -1) dir = 1;
+else if (hveloc == -1) dir = 2;
+else if (vveloc == 1) dir = 3;
+
+if (hveloc == 0 && vveloc == 0) {
+switch (dir) {
+case 0:
+sprite_index = spr_personagem_parado_direita;
+break;
+case 1:
+sprite_index = spr_personagem_parado_cima;
+break;
+case 2:
+sprite_index = spr_personagem_parado_esquerda;
+break;
+case 3:
+sprite_index = spr_personagem_parado_baixo;
+break;
+}
+} else {
+switch (dir) {
+case 0:
+sprite_index = spr_personagem_correndo_direita;
+break;
+case 1:
+sprite_index = spr_personagem_correndo_cima;
+break;
+case 2:
+sprite_index = spr_personagem_correndo_esquerda;
+break;
+case 3:
+sprite_index = spr_personagem_correndo_baixo;
+break;
+}
+}
+
 #endregion
 #region Colisão
 
@@ -84,46 +132,13 @@ if (mouse_check_button(mb_left) && cooldown < 1)
 cooldown = cooldown - 1 
 	
 #endregion
-if (keyboard_check(ord("D"))) hveloc = 1;
-else if (keyboard_check(ord("A"))) hveloc = -1;
-
-if (keyboard_check(ord("W"))) vveloc = -1;
-else if (keyboard_check(ord("S"))) vveloc = 1;
-
-var dir = 0;
-if (hveloc == 1) dir = 0;
-else if (vveloc == -1) dir = 1;
-else if (hveloc == -1) dir = 2;
-else if (vveloc == 1) dir = 3;
-
-if (hveloc == 0 && vveloc == 0) {
-switch (dir) {
-case 0:
-sprite_index = spr_personagem_parado_direita;
-break;
-case 1:
-sprite_index = spr_personagem_parado_cima;
-break;
-case 2:
-sprite_index = spr_personagem_parado_esquerda;
-break;
-case 3:
-sprite_index = spr_personagem_parado_baixo;
-break;
-}
-} else {
-switch (dir) {
-case 0:
-sprite_index = spr_personagem_correndo_direita;
-break;
-case 1:
-sprite_index = spr_personagem_correndo_cima;
-break;
-case 2:
-sprite_index = spr_personagem_correndo_esquerda;
-break;
-case 3:
-sprite_index = spr_personagem_correndo_baixo;
-break;
+#region Dialogo
+if distance_to_object(obj_par_npcs) <= 10{
+if keyboard_check_pressed(ord("E")){
+var _npc = instance_nearest(x, y, obj_par_npcs);
+var _dialogo = instance_create_layer(x, y, "Dialogo", obj_dialogo);
+_dialogo.npc_nome = _npc.nome;
+global.dialogo = true;
 }
 }
+#endregion
