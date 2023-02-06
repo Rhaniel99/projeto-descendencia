@@ -3,9 +3,8 @@
 function src_textos() {
 	switch npc_nome {
 		case "Jotaro":
-			texto[0] = "Atumalacaca";
-			texto[1] = "Whatssap 3?";
-			texto[2] = "Duvido tu clicar de novo";
+			texto[0] = "Seja bem, vindo amigo.";
+			texto[1] = "Está preparado para palavra de Whatssap 3?";
 			break;
 	}
 }

@@ -22,3 +22,5 @@ vveloc = 0;
 
 veloc = 2;
 veloc_dir = -1;
+
+estado = src_personagem_andando;
