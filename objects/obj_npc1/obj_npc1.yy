@@ -9,8 +9,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "NPC",
-    "path": "folders/Objetos/NPC.yy",
+    "name": "Projeto-Desconhecido",
+    "path": "Projeto-Desconhecido.yyp",
   },
   "parentObjectId": {
     "name": "obj_par_npcs",
